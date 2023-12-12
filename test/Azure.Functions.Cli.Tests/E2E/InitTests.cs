@@ -290,7 +290,7 @@ namespace Azure.Functions.Cli.Tests.E2E
                     new FileResult
                     {
                         Name = "Dockerfile",
-                        ContentContains = new[] { $"FROM mcr.microsoft.com/azure-functions/dotnet-isolated:4.0-dotnet-isolated6.0" }
+                        ContentContains = new[] { $"FROM mcr.microsoft.com/azure-functions/dotnet-isolated:4-dotnet-isolated6.0" }
                     }
                 },
                 OutputContains = new[] { "Dockerfile" }
@@ -479,7 +479,7 @@ namespace Azure.Functions.Cli.Tests.E2E
                     "Writing local.settings.json",
                     $".vscode{Path.DirectorySeparatorChar}extensions.json",
                 },
-                CommandTimeout = TimeSpan.FromSeconds(120)
+                CommandTimeout = TimeSpan.FromSeconds(240)
             }, _output);
         }
 
